@@ -19,7 +19,14 @@ fun contarPares(inicio: Int, fin: Int): Int {
 }
 
 fun fibonacci(n: Int): Int {
-
+    var nuevo = 0
+    var viejo = 1
+    for (i in 2..n) {
+        val suma_f = nuevo + viejo
+        nuevo = viejo
+        viejo = suma_f
+    }
+    return viejo
     TODO("Retornar el n-esimo numero de Fibonacci")
 }
 
@@ -84,9 +91,22 @@ fun contarVocales(texto: String): Int {
 }
 
 fun esPalindromo(texto: String): Boolean {
+    var recorrido = ""
+    var recorrido_2 = ""
+    for (letra in texto) {
+        recorrido = recorrido + letra
+    }
+    for (letra in texto) {
+        recorrido_2 = letra + recorrido_2
+    }
+    return if (recorrido == recorrido_2) true else false
     TODO("Verificar si el texto es un palindromo (ignorando espacios)")
 }
 
 fun tablaMultiplicar(numero: Int): List<Int> {
-    TODO("Retornar lista con la tabla de multiplicar del 1 al 10")
+    val resultado = mutableListOf<Int>()
+    for (i in 1..10) {
+        resultado.add(numero * i)
+    }
+    return resultado
 }
