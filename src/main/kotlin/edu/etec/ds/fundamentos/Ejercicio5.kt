@@ -19,30 +19,67 @@ fun contarPares(inicio: Int, fin: Int): Int {
 }
 
 fun fibonacci(n: Int): Int {
+
     TODO("Retornar el n-esimo numero de Fibonacci")
 }
 
 fun factorial(n: Int): Int {
+    var resultado = 1
+    for (i in 1..n) {
+        resultado = resultado * resultado
+    }
+    return resultado
     TODO("Calcular el factorial de n")
 }
 
 fun encontrarMaximo(numeros: List<Int>): Int {
+    var maximo = numeros[0]
+    for (numero in numeros) {
+        if (numero > maximo) {
+            maximo = numero
+        }
+    }
+    return maximo
     TODO("Encontrar el valor maximo en la lista")
 }
 
 fun encontrarMinimo(numeros: List<Int>): Int {
+    var minimo = numeros[0]
+    for (numero in numeros) {
+        if (numero < minimo) {
+            minimo = numero
+        }
+    }
+    return minimo
     TODO("Encontrar el valor minimo en la lista")
 }
 
 fun sumarLista(numeros: List<Int>): Int {
+    var suma = 0
+    for (numero in numeros) {
+        suma += numero
+    }
+    return suma
     TODO("Sumar todos los elementos de la lista")
 }
 
 fun inverter(texto: String): String {
+    var recorrido = ""
+    for (letra in texto) {
+        recorrido = letra + recorrido
+    }
+    return recorrido
     TODO("Invertir la cadena de texto")
 }
 
 fun contarVocales(texto: String): Int {
+    var contador = 0
+    for (letra in texto) {
+        if (letra in "aeiouAEIOU") {
+            contador += 1
+        }
+    }
+    return contador
     TODO("Contar las vocales en el texto (considerar mayusculas y minusculas)")
 }
 
