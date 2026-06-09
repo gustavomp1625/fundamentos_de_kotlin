@@ -19,15 +19,15 @@ fun contarPares(inicio: Int, fin: Int): Int {
 }
 
 fun fibonacci(n: Int): Int {
-    var nuevo = 0
-    var viejo = 1
+    if (n <= 1) return n
+    var viejo = 0
+    var nuevo = 1
     for (i in 2..n) {
-        val suma_f = nuevo + viejo
-        nuevo = viejo
-        viejo = suma_f
+        val suma = viejo + nuevo
+        viejo = nuevo
+        nuevo = suma
     }
-    return viejo
-    TODO("Retornar el n-esimo numero de Fibonacci")
+    return nuevo
 }
 
 fun factorial(n: Int): Int {
@@ -91,15 +91,18 @@ fun contarVocales(texto: String): Int {
 }
 
 fun esPalindromo(texto: String): Boolean {
+    val textoLimpio = texto.replace(" ", "").lowercase()
     var recorrido = ""
     var recorrido_2 = ""
-    for (letra in texto) {
+
+    for (letra in textoLimpio) {
         recorrido = recorrido + letra
     }
-    for (letra in texto) {
+    for (letra in textoLimpio) {
         recorrido_2 = letra + recorrido_2
     }
-    return if (recorrido == recorrido_2) true else false
+
+    return recorrido == recorrido_2
     TODO("Verificar si el texto es un palindromo (ignorando espacios)")
 }
 
