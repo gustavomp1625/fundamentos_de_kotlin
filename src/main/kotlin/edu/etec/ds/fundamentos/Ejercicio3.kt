@@ -26,10 +26,12 @@ fun crearSaludo(titulo: String, nombre: String): String {
 }
 
 fun funcionSinRetorno(): Unit {
+    return Unit
     TODO("Esta funcion no retorna nada")
 }
 
 fun cuadrado(numero: Int): Int {
+    return numero * numero
     TODO("Retornar el cuadrado del numero")
 }
 
@@ -50,5 +52,6 @@ fun sumarTodos(vararg numeros: Int): Int {
 }
 
 fun aplicarOperacion(a: Int, b: Int, operacion: (Int, Int) -> Int): Int {
+    return operacion(a, b)
     TODO("Aplicar una operacion lambda a dos numeros")
 }
