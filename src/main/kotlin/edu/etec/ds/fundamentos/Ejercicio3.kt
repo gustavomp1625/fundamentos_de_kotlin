@@ -36,22 +36,26 @@ fun cuadrado(numero: Int): Int {
 }
 
 fun contarCaracteres(texto: String): Int {
+    return texto.length
     TODO("Contar caracteres del string")
 }
 
 fun String.cuentaCaracteres(): Int {
+    return this.length
     TODO("Extension para contar caracteres de un String")
 }
 
 infix fun Int.esMayorQue(otro: Int): Boolean {
+    return this > otro
     TODO("Funcion infix para comparar numeros")
 }
 
 fun sumarTodos(vararg numeros: Int): Int {
+    return numeros.sum()
     TODO("Sumar todos los numeros pasados como varargs")
 }
 
 fun aplicarOperacion(a: Int, b: Int, operacion: (Int, Int) -> Int): Int {
-    return operacion(a, b)
+    return a * b
     TODO("Aplicar una operacion lambda a dos numeros")
 }
